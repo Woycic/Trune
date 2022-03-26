@@ -1,0 +1,121 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@300;500;700&display=swap');
+
+
+/* Variables */
+
+:root {
+    --principal: #4d4c4c;
+    --secondary: #FFFFFF;
+    --font-primary: "Inter" , sans-serif;
+    --font-secondary: "Bowlby One SC" , cursive;
+    --text-lg: 2em;
+    --text-md: 1.8em;
+}
+
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globals */
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    color: var(--secondary);
+    background-color: var(--principal);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+/* Helpers */
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+header {
+    background-color: #4d4c4c;
+}
+
+
+header .navbar {
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+header.logo {
+    flex-basis: 30%;
+}
+
+
+header.menu {
+    flex-basis: 40%;
+    justify-content: space-between;
+}
+
+header.menu__item {
+    border: 2px solid var(--principal);
+    transition: border-color .3s ease-in-out;
+}
+
+header .menu__item:hover {
+    border: 2px solid var(--secondary);
+}
+
+.menu .menu__item .menu__link {
+    font-size: var(--text-md);
+    padding: 1rem;
+}
+
+.menu .menu__item:hover .sub-menu {
+    display: block;
+}
+
+
+.sub-menu {
+    display: none;
+    position: absolute;
+}
+
+.sub-menu .sub-menu__item .sub-menu__link {
+    padding: 1rem;
+    font-size: 1.4em;
+    transition: all .3s ease-in-out;
+}
+
+.sub-menu .sub-menu__item .sub-menu__link:hover {
+    background-color: var(--secondary);
+    color: var(--principal);
+}
